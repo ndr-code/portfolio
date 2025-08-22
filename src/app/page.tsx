@@ -1,15 +1,19 @@
-import { Button } from '@/components/ui/button';
+import Footer from './home/sections/footer';
+import Header from './home/sections/header';
+import Hero from './home/sections/hero';
+import Section1 from './home/sections/section1';
+import Section2 from './home/sections/section2';
+import Section3 from './home/sections/section3';
 
 export default function Home() {
   return (
-    <div className='grid min-h-screen grid-rows-[40px_1fr_20px] items-center justify-items-center gap-10 bg-neutral-100 p-8 pb-20 sm:p-10'>
-      <div className='flex h-10 w-full items-center justify-center bg-neutral-200 text-center font-bold'>
-        Home
-      </div>
-      <Button>Start</Button>
-      <div className='flex h-10 w-full items-center justify-center bg-neutral-200 text-center text-xs text-neutral-500'>
-        © 2025 ndr. All rights reserved.
-      </div>
+    <div className='flex-center flex min-h-screen flex-col bg-neutral-100'>
+      <Header />
+      <Hero />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Footer />
     </div>
   );
 }

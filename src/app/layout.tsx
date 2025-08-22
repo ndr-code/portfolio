@@ -11,8 +11,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'App',
-  description: '',
+  title: 'Tri Aji',
+  description: 'Personal Portfolio',
 };
 
 export default function RootLayout({
