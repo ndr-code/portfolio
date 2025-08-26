@@ -7,62 +7,64 @@ const data = {
   cards: [
     {
       id: '1',
-      iconPath: '/html-icon.png',
+      iconPath: '/icons/html-5.svg',
       name: 'HTML',
       description: 'Crafting semantic, accessible HTML structures.',
     },
     {
       id: '2',
-      iconPath: '/css-icon.png',
+      iconPath: '/icons/css.svg',
       name: 'CSS',
       description: 'Designing visually engaging and responsive layouts.',
     },
     {
       id: '3',
-      iconPath: '/javascript-icon.png',
+      iconPath: '/icons/js.svg',
       name: 'JavaScript',
       description: 'Bringing interactivity and dynamic content to life.',
     },
     {
       id: '4',
-      iconPath: '/react-icon.png',
+      iconPath: '/icons/ts.svg',
+      name: 'Typescript',
+      description: 'Adding type safety to JavaScript for more robust code.',
+    },
+    {
+      id: '5',
+      iconPath: '/icons/react.svg',
       name: 'React',
       description: 'Building user interfaces with reusable components.',
     },
     {
-      id: '5',
-      iconPath: '/nextjs-icon.png',
+      id: '6',
+      iconPath: '/icons/nextjs.svg',
       name: 'Next.js',
       description: 'Building server-rendered React applications with ease.',
     },
     {
-      id: '6',
-      iconPath: '/tailwind-icon.png',
+      id: '7',
+      iconPath: '/icons/tailwind.svg',
       name: 'Tailwind CSS',
       description: 'Utility-first CSS framework for rapid UI development.',
     },
     {
-      id: '7',
-      iconPath: '/radixui-icon.png',
-      name: 'Radix UI',
-      description:
-        'Unstyled, components for building high-quality design systems.',
-    },
-    {
       id: '8',
-      iconPath: '/motion-icon.png',
-      name: 'Motion',
-      description: 'Creating smooth, performant animations and transitions.',
+      iconPath: '/icons/nodejs.svg',
+      name: 'Node.js',
+      description: "JavaScript runtime built on Chrome's V8 JavaScript engine.",
     },
   ],
 };
 
 const Section3 = () => {
   return (
-    <div className='custom-container'>
+    <div
+      id='skills'
+      className='custom-container bg-gradient-to-b from-[#9E385E]/0 to-[#9E385E]/10'
+    >
       <div className='pb-12 text-center'>
-        <h1 className='text-display-xl font-semibold'>{data.title}</h1>
-        <p className='text-sm'>{data.description}</p>
+        <h2 className='text-display-xl mb-4 font-bold'>{data.title}</h2>
+        <p className='text-md'>{data.description}</p>
       </div>
       <div className='flex-center flex flex-wrap gap-5'>
         {data.cards.map((card) => (

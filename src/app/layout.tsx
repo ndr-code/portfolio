@@ -1,7 +1,13 @@
 import { clsx } from 'clsx';
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Anton, Montserrat } from 'next/font/google';
 import './globals.css';
+
+const anton = Anton({
+  variable: '--font-anton',
+  weight: ['400'],
+  subsets: ['latin'],
+});
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -22,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(montserrat.variable, 'antialiased')}>
+      <body
+        className={clsx(montserrat.variable, anton.variable, 'antialiased')}
+      >
         {children}
       </body>
     </html>

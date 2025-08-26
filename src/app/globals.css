@@ -7,6 +7,7 @@
 @theme {
   /* Fonts */
   --font-montserrat: 'Montserrat', sans-serif;
+  --font-anton: 'Anton', sans-serif;
 
   /* Font Weights */
   --font-weight-regular: 400;
@@ -21,15 +22,15 @@
 
   --text-display-2xl: 3rem; /* 48px */
   --text-display-2xl-line-height: 3.75rem; /* 60px */
-  --text-display-2xl-letter-spacing: -0.02em; /* -2% */
+  --text-display-2xl-letter-spacing: -0.03em; /* -2% */
 
   --text-display-xl: 2.5rem; /* 40px */
   --text-display-xl-line-height: 3rem; /* 48px */
-  --text-display-xl-letter-spacing: -0.02em; /* -2% */
+  --text-display-xl-letter-spacing: -0.03em; /* -2% */
 
   --text-display-lg: 2.25rem; /* 36px */
   --text-display-lg-line-height: 2.75rem; /* 44px */
-  --text-display-lg-letter-spacing: -0.02em; /* -2% */
+  --text-display-lg-letter-spacing: -0.03em; /* -2% */
 
   --text-display-md: 2rem; /* 32px */
   --text-display-md-line-height: 2.5rem; /* 40px */
@@ -214,7 +215,10 @@ body {
 
 @layer components {
   .custom-container {
-    @apply max-w-300 py-20;
+    @apply px-30 py-20;
+  }
+  .hero {
+    @apply font-anton;
   }
 }
 

@@ -1,7 +1,7 @@
 const Section1 = () => {
   return (
     <div
-      id='section1'
+      id='about'
       className='custom-container text-display-lg text-center text-neutral-950'
     >
       As frontend developers , we bring designs to life <br /> with

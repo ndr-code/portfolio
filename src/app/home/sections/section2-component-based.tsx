@@ -26,10 +26,7 @@ const data = {
 
 const Section2 = () => {
   return (
-    <div
-      id='section2'
-      className='custom-container flex-center flex flex-row gap-20'
-    >
+    <div className='custom-container flex-center flex flex-row gap-20'>
       {data.cards.map((card) => (
         <div key={card.id} className=''>
           <div className='flex-center flex h-16 w-16 rounded-full border-1 border-neutral-300 text-3xl'>

@@ -5,7 +5,7 @@ import { IoArrowForwardOutline } from 'react-icons/io5';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'group inline-flex flex-between gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none cursor-pointer pr-2 pl-4 py-2',
+  'group inline-flex items-center justify-between gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none cursor-pointer pr-2 pl-4 font-semibold',
   {
     variants: {
       variant: {

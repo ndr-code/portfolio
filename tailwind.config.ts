@@ -25,8 +25,13 @@ const fontWeights = {
 };
 
 const customTextPlugin = plugin(({ addUtilities }) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <type could be anything>
   const newUtilities: Record<string, any> = {};
+
+  addUtilities({
+    '.text-stroke-2': {
+      '-webkit-text-stroke': '1px #f3b64c',
+    },
+  });
 
   for (const [sizeName, sizeVar] of Object.entries(textSizes)) {
     for (const [weightName, weightVar] of Object.entries(fontWeights)) {
@@ -38,7 +43,6 @@ const customTextPlugin = plugin(({ addUtilities }) => {
       };
     }
   }
-
   addUtilities(newUtilities);
 });
 
@@ -52,6 +56,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['var(--font-montserrat)'],
+        anton: ['var(--font-anton)'],
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',

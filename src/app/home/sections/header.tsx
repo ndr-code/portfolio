@@ -1,13 +1,107 @@
+'use client';
+import { useEffect, useState } from 'react';
+
 const Header = () => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    let scrollTimer: NodeJS.Timeout;
+
+    const controlHeader = () => {
+      // Hide header when scrolling
+      setVisible(false);
+
+      // Clear existing timer
+      clearTimeout(scrollTimer);
+
+      // Set new timer to show header after 1 second of no scrolling
+      scrollTimer = setTimeout(() => {
+        setVisible(true);
+      }, 100);
+    };
+
+    window.addEventListener('scroll', controlHeader);
+
+    return () => {
+      window.removeEventListener('scroll', controlHeader);
+      clearTimeout(scrollTimer);
+    };
+  }, []);
+
   return (
-    <div className='fixed top-4 z-50'>
-      <ul className='text-md flex-center flex h-12 flex-row gap-6 rounded-full bg-neutral-950/20 px-6 text-white'>
-        <li className='p-2'>Home</li>
-        <li className='p-2'>About</li>
-        <li className='p-2'>Skill</li>
-        <li className='p-2'>Projects</li>
-        <li className='p-2'>FAQ</li>
-        <li className='p-2'>Contact</li>
+    <div
+      className={`fixed top-4 z-50 transition-transform duration-300 ${
+        visible ? 'translate-y-0' : '-translate-y-20'
+      }`}
+    >
+      <ul className='text-md flex-center flex h-12 flex-row gap-6 rounded-full bg-neutral-950/20 px-6 text-white backdrop-blur-sm'>
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('home');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            Home
+          </button>
+        </li>
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('about');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            About
+          </button>
+        </li>
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('skills');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            Skills
+          </button>
+        </li>
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('projects');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            Projects
+          </button>
+        </li>
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('faq');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            FAQ
+          </button>
+        </li>
+
+        <li className='p-2'>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='hover:text-primary-300 cursor-pointer transition-colors'
+          >
+            Contact
+          </button>
+        </li>
       </ul>
     </div>
   );
