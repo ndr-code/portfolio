@@ -1,12 +1,14 @@
+import { section1 } from '@/app/const/sections';
+
 const Section1 = () => {
   return (
     <div
       id='about'
-      className='custom-container text-display-lg text-center text-neutral-950'
+      className='custom-container text-display-lg text-weight-500 text-center text-neutral-950'
     >
-      As frontend developers , we bring designs to life <br /> with
-      <span className='text-primary-300'> clean, responsive code .</span>that
-      blends creativity <br /> 🎨 with usability 🌟
+      {section1.text[0]} <br /> {section1.text[1]}
+      <span className='text-primary-300'> {section1.text[2]}</span>{' '}
+      {section1.text[3]} <br /> {section1.text[4]}
     </div>
   );
 };

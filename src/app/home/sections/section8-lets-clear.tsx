@@ -1,14 +1,21 @@
+import { section8 } from '@/app/const/sections';
+
 const Section8 = () => {
   return (
     <div id='faq' className='custom-container w-full bg-neutral-100'>
-      <div className='w-full text-center'>
-        <h2 className='text-display-xl mb-4 font-bold'>
-          Let&apos;s Clear Things Up
-        </h2>
-        <p className='text-md'>
-          I&apos;ve answered a few questions that usually come up when working
-          with a frontend developer like me.
-        </p>
+      <div>
+        <div className='w-full text-center'>
+          <h2 className='text-display-xl mb-4 font-bold'>{section8.title}</h2>
+          <p className='text-md'>{section8.description}</p>
+        </div>
+      </div>
+      <div className='mt-8'>
+        {section8.questions.map((question) => (
+          <div key={question.id} className='mb-4'>
+            <h3 className='text-lg font-semibold'>{question.question}</h3>
+            <p className='text-md'>{question.answer}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

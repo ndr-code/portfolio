@@ -1,33 +1,9 @@
-const data = {
-  cards: [
-    {
-      id: 1,
-      icon: '⚙️',
-      title: 'COMPONENT-BASED DEVELOPMENT',
-      content:
-        'Reusable, scalable code built with modern frameworks like React or Vue.',
-    },
-    {
-      id: 2,
-      icon: '🎨',
-      title: 'PIXEL-PERFECT UI IMPLEMENTATION',
-      content:
-        'Translating design into high-fidelity user interfaces with attention to detail.',
-    },
-    {
-      id: 3,
-      icon: '📱',
-      title: 'RESPONSIVE & ACCESSIBLE DESIGN',
-      content:
-        'Optimized layouts that work seamlessly across all screen sizes and devices.',
-    },
-  ],
-};
+import { section2 } from '@/app/const/sections';
 
 const Section2 = () => {
   return (
     <div className='custom-container flex-center flex flex-row gap-20'>
-      {data.cards.map((card) => (
+      {section2.cards.map((card) => (
         <div key={card.id} className=''>
           <div className='flex-center flex h-16 w-16 rounded-full border-1 border-neutral-300 text-3xl'>
             {card.icon}

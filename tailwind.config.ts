@@ -57,6 +57,7 @@ export default {
       fontFamily: {
         sans: ['var(--font-montserrat)'],
         anton: ['var(--font-anton)'],
+        bonheur: ['var(--font-bonheur)'],
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',

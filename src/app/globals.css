@@ -8,6 +8,7 @@
   /* Fonts */
   --font-montserrat: 'Montserrat', sans-serif;
   --font-anton: 'Anton', sans-serif;
+  --font-bonheur: 'Bonheur Royale', sans-serif;
 
   /* Font Weights */
   --font-weight-regular: 400;
@@ -76,6 +77,7 @@
   --color-primary-200: #da627d;
   --color-primary-300: #b76080;
   --color-primary-400: #a53860;
+  --color-primary-500: #860d39;
 
   /* Colors - Secondary */
   --color-secondary-100: #f3b64c;
@@ -234,6 +236,11 @@ body {
 
   .flex-start {
     @apply flex items-center justify-start;
+  }
+
+  /* center utilities */
+  .center-position {
+    @apply top-1/2 left-1/2;
   }
 }
 

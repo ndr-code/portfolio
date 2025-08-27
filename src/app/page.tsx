@@ -1,4 +1,3 @@
-import Footer from './home/sections/z-footer';
 import Header from './home/sections/header';
 import Hero from './home/sections/hero';
 import Section1 from './home/sections/section1-as-front-end';
@@ -10,6 +9,7 @@ import Section6 from './home/sections/section6-experiences';
 import Section7 from './home/sections/section7-what-they-say';
 import Section8 from './home/sections/section8-lets-clear';
 import Section9 from './home/sections/section9-lets-work';
+import Footer from './home/sections/z-footer';
 
 export default function Home() {
   return (
