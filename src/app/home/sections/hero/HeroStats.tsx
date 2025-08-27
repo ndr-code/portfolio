@@ -4,7 +4,7 @@ import { heroStats } from '@/app/const/hero';
 
 const HeroStats = () => {
   return (
-    <div className='font-montserrat text-primary-100 absolute right-30 bottom-20 z-50'>
+    <div className='font-montserrat text-primary-100 absolute top-1/2 right-30 z-50 -translate-y-1/2'>
       <div className='flex flex-col gap-8 py-5'>
         {heroStats.map((stat) => (
           <div

@@ -2,7 +2,6 @@
 
 import HeroDescription from './hero/HeroDescription';
 import HeroStats from './hero/HeroStats';
-import HeroTechStack from './hero/HeroTechStack';
 import HeroTitle from './hero/HeroTitle';
 
 const Hero = () => {
@@ -12,7 +11,6 @@ const Hero = () => {
       className='bg-primary-400 relative h-screen w-screen overflow-hidden'
     >
       <HeroTitle />
-      <HeroTechStack />
       <HeroDescription />
       <HeroStats />
     </div>
