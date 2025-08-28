@@ -22,7 +22,10 @@ const Section5 = () => {
 
       <div className='flex-center gap-4'>
         {section5.projects.map((project) => (
-          <div key={project.id} className='project-card p-4'>
+          <div
+            key={project.id}
+            className='project-card p-4 transition-all duration-300 hover:scale-110'
+          >
             <div className='w-full overflow-hidden rounded-4xl bg-neutral-200 p-4'>
               <Image
                 src={project.imagePath}
@@ -36,10 +39,19 @@ const Section5 = () => {
               <h3 className='mb-4 text-lg font-bold'>{project.name}</h3>
               <div className='border-2 border-t border-neutral-300'></div>
               <p className='text-md mt-4'>{project.description}</p>
-              <Button
-                variant='arrow'
-                className='absolute top-1/2 right-4 h-12 w-12 -translate-y-1/2 scale-120'
-              />
+              <a
+                href={project.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='absolute top-1/2 right-4 -translate-y-1/2'
+                tabIndex={-1}
+              >
+                <Button
+                  variant='arrow'
+                  className='h-12 w-12 scale-120'
+                  aria-label={`Go to ${project.name}`}
+                />
+              </a>
             </div>
           </div>
         ))}

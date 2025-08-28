@@ -51,7 +51,7 @@ function Button({
         variant === 'textArrow2' ||
         variant === 'arrow') && (
         <div
-          className={`text-neutral-25 flex-center flex h-10 w-10 rounded-full transition-all duration-300 group-hover:scale-115 ${variant === 'textArrow1' || variant === 'textArrow2' ? 'bg-neutral-950' : 'bg-primary-300 hover:scale-120 hover:bg-neutral-950/50'}`}
+          className={`text-neutral-25 flex-center flex h-10 w-10 rounded-full transition-all duration-300 group-hover:scale-115 ${variant === 'textArrow1' || variant === 'textArrow2' ? 'bg-neutral-950' : 'bg-primary-300 hover:scale-110 hover:bg-neutral-950/50'}`}
         >
           <IoArrowForwardOutline />
         </div>
