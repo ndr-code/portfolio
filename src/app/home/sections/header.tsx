@@ -1,59 +1,99 @@
 'use client';
-import { useEffect, useState } from 'react';
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
-import { headerNavlink } from '@/app/constants/header-data';
+import { navigationData } from '@/app/constants/header-data';
 
+// Ensure each section has a corresponding id in the DOM
 const Header = () => {
-  const [visible, setVisible] = useState(true);
+  // Logic for Header Backdrop
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollTimer, setScrollTimer] = useState<NodeJS.Timeout>();
+
+  const { scrollY } = useScroll();
+  const background = useTransform(
+    scrollY,
+    [0, 100],
+    ['rgba(0,0,0,0.3)', 'rgba(0,0,0,0.5)']
+  );
+  const backdropBlur = useTransform(
+    scrollY,
+    [0, 100],
+    ['blur(0px)', 'blur(10px)']
+  );
+
+  // Logic for Scrolled Header
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > lastScrollY) {
+      setIsVisible(false);
+    }
+    setLastScrollY(latest);
+
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 300);
+
+    setScrollTimer(timer);
+  });
 
   useEffect(() => {
-    let scrollTimer: NodeJS.Timeout;
-    <div className='0'>
-      <div className=''></div>
-    </div>;
-    const controlHeader = () => {
-      // Hide header when scrolling
-      setVisible(false);
-
-      // Clear existing timer
-      clearTimeout(scrollTimer);
-
-      // Set new timer to show header after 1 second of no scrolling
-      scrollTimer = setTimeout(() => {
-        setVisible(true);
-      }, 100);
-    };
-
-    window.addEventListener('scroll', controlHeader);
-
     return () => {
-      window.removeEventListener('scroll', controlHeader);
-      clearTimeout(scrollTimer);
+      if (scrollTimer) {
+        clearTimeout(scrollTimer);
+      }
     };
-  }, []);
+  }, [scrollTimer]);
 
   return (
-    <div
-      className={`fixed top-4 z-50 transition-transform duration-300 ${
-        visible ? 'translate-y-0' : '-translate-y-20'
-      }`}
+    <motion.header
+      style={{ background, backdropFilter: backdropBlur }}
+      className={`fixed top-4 z-50 rounded-full sm:bg-neutral-950/20`}
+      animate={{
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: 'easeInOut',
+      }}
     >
-      <ul className='text-md flex-center flex h-12 flex-row gap-6 rounded-full bg-neutral-950/20 px-6 text-white backdrop-blur-sm'>
-        {headerNavlink.map((link) => (
-          <li key={link.label} className='p-2'>
+      <ul className='text-md flex-center flex h-12 flex-row gap-4 px-6 text-white'>
+        {navigationData.map((data) => (
+          <li key={data.label}>
             <button
+              type='button'
               onClick={() => {
-                const element = document.getElementById(link.path);
-                element?.scrollIntoView({ behavior: 'smooth' });
+                const sectionId = data.href.replace('#', '');
+                const section = document.getElementById(sectionId);
+                if (section) {
+                  section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                } else {
+                  console.warn(`Section with id '${sectionId}' not found.`);
+                }
               }}
-              className='hover:text-primary-300 cursor-pointer transition-colors'
+              className='hover:text-primary-150 hover:decoration-primary-150 active:text-primary-150 active:decoration-primary-150 md:text-md cursor-pointer border-none bg-transparent p-4 transition-all duration-300 ease-in-out outline-none hover:underline hover:underline-offset-4 active:underline active:underline-offset-4'
             >
-              {link.label}
+              {data.label}
             </button>
           </li>
         ))}
       </ul>
-    </div>
+    </motion.header>
   );
 };
 

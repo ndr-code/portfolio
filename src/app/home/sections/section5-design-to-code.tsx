@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { Button } from '@/components/ui/button';
 
 import { section5 } from '@/app/constants/sections-data';
@@ -18,8 +20,29 @@ const Section5 = () => {
         </Button>
       </div>
 
-      <div className='flex-center h-100 w-full bg-red-500'>
-        Portfolio Container
+      <div className='flex-center gap-4'>
+        {section5.projects.map((project) => (
+          <div key={project.id} className='project-card p-4'>
+            <div className='w-full overflow-hidden rounded-4xl bg-neutral-200 p-4'>
+              <Image
+                src={project.imagePath}
+                alt={project.name}
+                width={360}
+                height={360}
+                className='rounded-2xl'
+              />
+            </div>
+            <div className='relative rounded-4xl bg-neutral-200 p-4 text-left'>
+              <h3 className='mb-4 text-lg font-bold'>{project.name}</h3>
+              <div className='border-2 border-t border-neutral-300'></div>
+              <p className='text-md mt-4'>{project.description}</p>
+              <Button
+                variant='arrow'
+                className='absolute top-1/2 right-4 h-12 w-12 -translate-y-1/2 scale-120'
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

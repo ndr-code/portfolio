@@ -133,21 +133,21 @@ export const section5 = {
   projects: [
     {
       id: '1',
-      name: 'Project One',
-      imagePath: '/images/project-one.png',
-      description: 'A brief description of Project One.',
+      name: 'Portfolio 1',
+      imagePath: '/images/portfolio-1.png',
+      description: 'Web Development',
     },
     {
       id: '2',
-      name: 'Project Two',
-      imagePath: '/images/project-two.png',
-      description: 'A brief description of Project Two.',
+      name: 'Portfolio 2',
+      imagePath: '/images/portfolio-2.png',
+      description: 'Web Development',
     },
     {
       id: '3',
-      name: 'Project Three',
-      imagePath: '/images/project-three.png',
-      description: 'A brief description of Project Three.',
+      name: 'Portfolio 3',
+      imagePath: '/images/portfolio-3.png',
+      description: 'Web Development',
     },
   ],
 };
@@ -156,24 +156,33 @@ export const section6 = {
   title: ['Experiences That', 'Shaped Me', '!'],
   description:
     'From startups to side projects, every step has been a chance to learn, build, and level up.',
-  projects: [
+  experiences: [
     {
       id: '1',
-      name: 'Project One',
-      imagePath: '/images/project-one.png',
-      description: 'A brief description of Project One.',
+      period: '2025 - Present',
+      position: 'Frontend Developer',
+      company: 'Airbnb.',
+      imagePath: '/icons/comp-1.svg',
+      description:
+        'Built responsive web interfaces using modern frameworks like React.js, ensuring seamless integration with backend systems. Optimized performance, implemented accessible designs, and delivered clean, reusable code to enhance user experience and scalability.',
     },
     {
       id: '2',
-      name: 'Project Two',
-      imagePath: '/images/project-two.png',
-      description: 'A brief description of Project Two.',
+      period: '2024 - 2025',
+      position: 'Frontend Developer',
+      company: 'Airtasker',
+      imagePath: '/icons/comp-2.svg',
+      description:
+        'Built responsive web interfaces using modern frameworks like React.js, ensuring seamless integration with backend systems. Optimized performance, implemented accessible designs, and delivered clean, reusable code to enhance user experience and scalability.',
     },
     {
       id: '3',
-      name: 'Project Three',
-      imagePath: '/images/project-three.png',
-      description: 'A brief description of Project Three.',
+      period: '2023 - 2024',
+      position: 'Frontend Developer',
+      company: 'Slack',
+      imagePath: '/icons/comp-3.svg',
+      description:
+        'Built responsive web interfaces using modern frameworks like React.js, ensuring seamless integration with backend systems. Optimized performance, implemented accessible designs, and delivered clean, reusable code to enhance user experience and scalability.',
     },
   ],
 };
@@ -185,18 +194,25 @@ export const section7 = {
   testimonials: [
     {
       id: 1,
-      name: 'Client One',
-      feedback: 'An exceptional developer who truly understands our needs.',
+      name: 'Sarah Tan',
+      job: 'Product Manager at Finovate',
+      photo: '/images/photo-1.png',
+      feedback:
+        '“Working with Tri Aji was a smooth experience from start to finish. He translated our design into clean, responsive code and even suggested improvements we hadn’t thought of. Highly recommended!”',
     },
     {
       id: 2,
-      name: 'Client Two',
+      name: 'Joe Taslim',
+      job: 'Designer at Creative Co',
+      photo: '/images/photo-1.png',
       feedback:
         'Delivers high-quality work on time and is a pleasure to work with.',
     },
     {
       id: 3,
-      name: 'Client Three',
+      name: 'Bryan Adam',
+      job: 'Developer at Tech Solutions',
+      photo: '/images/photo-1.png',
       feedback:
         'A great collaborator who brings valuable insights to the table.',
     },
@@ -209,22 +225,44 @@ export const section8 = {
     "I've answered a few questions that usually come up when working with a frontend developer like me.",
   questions: [
     {
-      id: 1,
+      number: '01',
       question: 'What is your development process like?',
       answer:
         'I follow a structured process that includes requirements gathering, design, implementation, and testing.',
     },
     {
-      id: 2,
+      number: '02',
       question: 'How do you ensure code quality?',
       answer:
         'I use a combination of code reviews, automated testing, and continuous integration to maintain high code quality.',
     },
     {
-      id: 3,
+      number: '03',
       question: 'What technologies do you work with?',
       answer:
-        'I primarily work with React, TypeScript, and Tailwind CSS, but I&apos;m always open to learning new technologies.',
+        ' I mainly work with HTML, CSS, JavaScript, and frameworks like React, Next.js, and Vue. I also have experience using Tailwind CSS, TypeScript, and working with APIs.',
+    },
+    {
+      number: '04',
+      question: 'Do you work on freelance or remote projects?',
+      answer: 'Yes, I am open to both freelance and remote opportunities.',
+    },
+    {
+      number: '05',
+      question: 'Can you convert Figma or Sketch designs into code?',
+      answer:
+        'Yes, I can convert Figma or Sketch designs into code using modern web technologies.',
+    },
+    {
+      number: '06',
+      question: 'Do you collaborate with backend developers or teams?',
+      answer:
+        'Yes, I have experience collaborating with backend developers and teams to ensure seamless integration between frontend and backend systems.',
+    },
+    {
+      number: '07',
+      question: 'Are you available for full-time roles?',
+      answer: 'Yes, I am available for full-time roles.',
     },
   ],
 };
@@ -233,4 +271,24 @@ export const section9 = {
   title: "Let's Work Together",
   description:
     "Have a project in mind or just want to say hi? Drop me a message — I'd love to hear from you.",
+    projects: [
+    {
+      id: '1',
+      name: 'Portfolio 1',
+      imagePath: '/images/portfolio-1.png',
+      description: 'Web Development',
+    },
+    {
+      id: '2',
+      name: 'Portfolio 2',
+      imagePath: '/images/portfolio-2.png',
+      description: 'Web Development',
+    },
+    {
+      id: '3',
+      name: 'Portfolio 3',
+      imagePath: '/images/portfolio-3.png',
+      description: 'Web Development',
+    },
+  ],
 };

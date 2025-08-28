@@ -55,16 +55,16 @@ const HeroTitle = () => {
 
       <div className=''>
         <Image
-          src='/star.svg'
+          src='/icons/star.svg'
           alt='Star Icon'
-          className='center-position absolute z-5 -translate-x-[calc(50%+340px)] -translate-y-[calc(50%+35px)] animate-pulse'
+          className='center-position absolute z-5 -translate-x-[calc(50%+340px)] -translate-y-[calc(50%+35px)]'
           width={160}
           height={160}
         />
         <Image
-          src='/star.svg'
+          src='/icons/star.svg'
           alt='Star Icon'
-          className='center-position absolute z-5 -translate-x-[calc(50%-250px)] -translate-y-[calc(50%-260px)] rotate-60 animate-pulse'
+          className='center-position absolute z-5 -translate-x-[calc(50%-250px)] -translate-y-[calc(50%-260px)] rotate-60'
           width={160}
           height={160}
         />
@@ -76,7 +76,7 @@ const HeroTitle = () => {
         <Image
           src='/hero-bg-art.png'
           alt='Background Art'
-          className='absolute inset-0 z-0 animate-pulse'
+          className='absolute inset-0 z-0'
           fill
           priority
         />
