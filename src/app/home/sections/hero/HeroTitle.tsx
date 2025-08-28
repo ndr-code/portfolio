@@ -74,7 +74,7 @@ const HeroTitle = () => {
 
       <div>
         <Image
-          src='/hero-bg-art.png'
+          src='/images/hero-bg-art.png'
           alt='Background Art'
           className='absolute inset-0 z-0'
           fill

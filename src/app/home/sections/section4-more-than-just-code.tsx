@@ -90,7 +90,7 @@ const Section4 = () => {
             transition={{ duration: 0.6 }}
           >
             <Image
-              src='/profile-hero-purple-6.png'
+              src='/images/profile-hero-purple-6.png'
               alt='Avatar'
               width={55}
               height={55}

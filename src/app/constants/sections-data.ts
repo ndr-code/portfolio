@@ -98,7 +98,7 @@ export const section4 = {
     {
       id: '1',
       title: 'With Me',
-      iconPath: '/icons/with-me.svg',
+      iconPath: '/images/profile-hero-purple-6.png',
       points: [
         'React Expert',
         'Precise Website Implementation',
@@ -271,7 +271,7 @@ export const section9 = {
   title: "Let's Work Together",
   description:
     "Have a project in mind or just want to say hi? Drop me a message — I'd love to hear from you.",
-    projects: [
+  projects: [
     {
       id: '1',
       name: 'Portfolio 1',

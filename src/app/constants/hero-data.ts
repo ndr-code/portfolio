@@ -1,5 +1,5 @@
 export const heroTitle = {
-  profile: { src: '/profile-hero-purple-6.png', alt: 'Hero Image' },
+  profile: { src: '/images/profile-hero-purple-6.png', alt: 'Hero Image' },
   main: 'FRONTEND',
   sub: 'DEVELOPER',
 };
