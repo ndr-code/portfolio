@@ -1,4 +1,4 @@
-import { section6 } from '@/app/const/sections';
+import { section6 } from '@/app/constants/sections-data';
 
 const Section6 = () => {
   return (

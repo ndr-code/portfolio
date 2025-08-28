@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-import { heroStats } from '@/app/const/hero';
+import { heroStats } from '@/app/constants/hero-data';
 
 const HeroStats = () => {
   return (

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 
-import { section3 } from '@/app/const/sections';
+import { section3 } from '@/app/constants/sections-data';
 
 const Section3 = () => {
   return (

@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 
-import { footer } from '@/app/const/z-footer';
+import { footer } from '@/app/constants/z-footer-data';
 
 interface FooterLink {
   id: string;

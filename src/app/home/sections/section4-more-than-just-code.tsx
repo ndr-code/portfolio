@@ -3,7 +3,7 @@ import { X } from 'lucide-react';
 import Image from 'next/image';
 import { FaUser } from 'react-icons/fa6';
 
-import { section4 } from '@/app/const/sections';
+import { section4 } from '@/app/constants/sections-data';
 
 const Section4 = () => {
   return (

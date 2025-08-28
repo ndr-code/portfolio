@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-import { section5 } from '@/app/const/sections';
+import { section5 } from '@/app/constants/sections-data';
 
 const Section5 = () => {
   return (

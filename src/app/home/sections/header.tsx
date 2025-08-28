@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { headerNavlink } from '@/app/const/header';
+import { headerNavlink } from '@/app/constants/header-data';
 
 const Header = () => {
   const [visible, setVisible] = useState(true);
@@ -40,7 +40,7 @@ const Header = () => {
     >
       <ul className='text-md flex-center flex h-12 flex-row gap-6 rounded-full bg-neutral-950/20 px-6 text-white backdrop-blur-sm'>
         {headerNavlink.map((link) => (
-          <li key={link.id} className='p-2'>
+          <li key={link.label} className='p-2'>
             <button
               onClick={() => {
                 const element = document.getElementById(link.path);
@@ -48,7 +48,7 @@ const Header = () => {
               }}
               className='hover:text-primary-300 cursor-pointer transition-colors'
             >
-              {link.text}
+              {link.label}
             </button>
           </li>
         ))}

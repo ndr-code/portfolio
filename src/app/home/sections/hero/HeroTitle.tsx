@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { BsMouse } from 'react-icons/bs';
 
-import { heroTitle } from '@/app/const/hero';
+import { heroTitle } from '@/app/constants/hero-data';
 
 const HeroTitle = () => {
   return (

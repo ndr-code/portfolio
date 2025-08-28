@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { PiMicrophoneFill } from 'react-icons/pi';
 
-import { heroDescription } from '@/app/const/hero';
-import { heroTechStack } from '@/app/const/hero';
+import { heroDescription } from '@/app/constants/hero-data';
+import { heroTechStack } from '@/app/constants/hero-data';
 
 const HeroDescription = () => {
   return (
